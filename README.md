@@ -8,7 +8,7 @@ patients_img_uploads
 
 # I have used XAMPP to run the code locally.
 # store the downloaded folder with the code in 'htddocs' folder of XAMPP
-# start Apache and MySQL and then,
+# Open XAMPP, start Apache and MySQL and then,
 # In SQL admin, create a database called medical_history
 
 Now you are ready to run the app in your browser( I used chrome as it provides better support for newer HTML and CSS versions(More functionalities).
