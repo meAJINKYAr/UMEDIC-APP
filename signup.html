@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <br><br><br>
+        <title>UMEDIC|SignUp Page</title>
+        <meta name="viewport" content="width=device-width, intial-scale=1.0">
+        <script src="jquery-3.3.1.min.js"></script>
+        <style>
+             #header{
+                position:fixed;
+                padding:0px;
+                top:0;
+                border:2px solid black;
+                background-color:darkblue;
+                width:100%;
+            }
+            #signup{
+                border:1px solid black;
+                margin:10px;
+                padding:20px;
+                background-color:whitesmoke;
+                width:600px;
+                margin-top:20px;
+            }
+            a{
+                color:black;
+                text-decoration-line:None;
+                
+            }
+            input{
+                width:250px;
+            }
+        </style>
+    </head>
+    <body>
+            <div name="header" id="header">
+                <h1 align="center" style="word-spacing:30px;color:white;"><img src="medical.png" alt="medical sign" style="height:30px; width:30px;padding:0px;" > UMEDIC APP</h1>
+            </div>
+            <br><br><br>
+            <h3 align="center">UMEDIC| Sign Up Page</h3>
+            <div align="center">
+                <div name="signup" id="signup" align="center">
+                    <p><h3>Who Are You? </h3><button name="pbutton" id="pbutton">Patient</button> <button name="dbutton" id="dbutton">Doctor</button></p>
+                    
+                    <form name="psignup" id="psignup" action="patients.php" method="POST" align="left" hidden enctype="multipart/form-data">
+                        <fieldset>
+                            <legend><h3>UMEDIC PATIENT SIGN UP FORM</h3></legend>
+                            <h4>Kindly fill up the signup form bellow to use our service</h4>
+                            <fieldset>
+                                <legend><h3>Personal Information</h3></legend>
+                                <label>Name: </label><br>
+                                <input type="text" name="pname" id="pname" required autofocus>
+                                <br><br>
+                                <label>Email ID: </label><br>
+                                <input type="email" name="pmail" id="pmail" required>
+                                <br><br>
+                                <label>Contact Number: </label><br>
+                                <input type="number" name="pcontact" id="pcontact" placeholder="Enter 10 digit number"required>
+                                <br><br>
+                                <label>Date Of Birth: </label><br>
+                                <input type="date" name="pdob" id="pdob" style="width:130px;">
+                                <br><br>
+                                <label>Blood Group: </label><br>
+                                <input type="text" name="pbg" id="pbg" required>
+                                <br><br>
+                                <label>Address: </label><br>
+                                <input type="textbox" name="paddr" id="paddr" style="width:100%" required>
+                                <br><br>
+                                <label>Health Conditions:</label><br>
+                                <textarea name="hc" is="hc"  style="height:50px; width:80%"></textarea>
+                                <br><br>
+                                <label>Profile Photo: </label><br>
+                                <input type="file" name="ppic" id="ppic" pattern="[A-Za-z]-[.]-[png-jpg-jpeg]">
+                            </fieldset>
+                            <br>
+                            <fieldset>
+                                <legend><h3>Login Information</h3></legend>
+                                <label>Set Username:</label>
+                                <input type="text" name="puname" id="puname" required>
+                                <br><br>
+                                <label>Set Password:</label>
+                                <input type="password" name="ppass" id="ppass" required>
+                            </fieldset>
+                            <br>
+                            <button type="submit">SUBMIT</button>
+
+                        </fieldset>
+                        
+                        <br><hr>
+                        <button type="reset">RESET</button>
+                        <button type="button"><a href="signin.html">SIGN IN</a></button>
+                    </form>
+
+                    <form name="dsignup" id="dsignup" action="doctors.php" method="POST" align="left" hidden enctype="multipart/form-data">
+                        <fieldset>
+                            <legend><h3>UMEDIC DOCTOR SIGN UP FORM</h3></legend>
+                            <h4>Kindly fill up the signup form bellow to use our service</h4>
+                            <fieldset>
+                                <legend><h3>Personal Information</h3></legend>
+                                <label>Name: </label><br>
+                                <input type="text" name="dname" id="dname" required autofocus>
+                                <br><br>
+                                <label>Email ID: </label><br>
+                                <input type="email" name="dmail" id="dmail" required>
+                                <br><br>
+                                <label>Contact Number: </label><br>
+                                <input type="number" name="dcontact" id="dcontact" placeholder="Enter 10 digit number"required>
+                                <br><br>
+                                <label>Date Of Birth: </label><br>
+                                <input type="date" name="ddob" id="ddob" style="width:130px;">
+                                <br><br>
+                                <label>Address: </label><br>
+                                <input type="textbox" name="daddr" id="daddr" style="width:100%" required>
+                                <br><br>
+                                <label>Profile Photo: </label><br>
+                                <input type="file" name="dpic" id="dpic" >
+                            </fieldset>
+                            <br>
+                            <fieldset>
+                                <legend><h3>Professional Information: </h3></legend>
+                                <label>Degree Speciality: </label><br>
+                                <input type="text" name="job" id="job" required>
+                                <br><br>
+                                <label>Documents for Proof: </label><br>
+                                <input type="file" name="jp" id="jp" multiple>
+                                <br><br>
+                                <label>Address of Place of Practice: </label><br>
+                                <input type="text" name="jaddr" id="jaddr" required>
+                            </fieldset>
+                            <br>
+                            <fieldset>
+                                <legend><h3>Login Information</h3></legend>
+                                <label>Set Username:</label>
+                                <input type="text" name="duname" id="duname" required>
+                                <br><br>
+                                <label>Set Password:</label>
+                                <input type="password" name="dpass" id="dpass" required>
+                            </fieldset>
+                            <br>
+                            <button type="submit">SUBMIT</button>
+
+                        </fieldset>
+                        
+                        <br><br>
+                        <hr>
+                        <button type="reset">RESET</button>
+                        <button type="button"><a href="signin.html">SIGN IN</a></button>
+                    </form>
+                </div>
+            </div>
+
+            <script>
+                $(document).ready(function(){
+                    $("#pbutton").click(function(){
+                        $("#psignup").show("fast");
+                        $("#dsignup").hide("fast");
+                    })
+                    $("#dbutton").click(function(){
+                        $("#dsignup").show("fast");
+                        $("#psignup").hide("fast");
+                    })
+                })
+            </script>
+    </body>
+</html>

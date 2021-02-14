@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="jquery-3.3.1.min.js"></script>
+        <style>
+            #pre_form{
+                
+                width:600px;
+                min-height:600px;
+                padding:10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div name="presc" id="presc" align="center">
+            <form name="pre_form" id="pre_form" action="write_presc.php" method="POST" align="left" enctype="multipart/form-data">
+                <fieldset>
+                    <legend><b>Patient Details</b></legend>
+                    <p><label>Patient ID: </label><br> <input type="number" name="prpid" id="prpid"></p>
+                    <p><label>Patient Name: </label><br> <input tppe="text" name="prpname" id="prpname" style="width:60%;"></p>
+                    <br>
+                </fieldset>
+                <br><br>
+                <fieldset>
+                    <legend><b>Prescription Details</b></legend>
+                    <label>Diagnosis: </label><br>
+                    <textarea name="prdia" is="prdia"  style="height:60px; width:80%;"></textarea>
+                    <br><br>
+                    <label>Prescribed Medicines: </label><br>
+                    <textarea name="prmedi" is="prmedi"  style="height:100px; width:80%;"></textarea>
+                    <br><br>
+                    <label>Notes: </label><br>
+                    <textarea name="prnotes" is="prnotes"  style="height:100px; width:80%;"></textarea>
+                    <br><br>
+                    <label>Check Up Fees: </label><br>
+                    <p>Rs. <input type="number" name="prbill" id="prbill"></p>
+                    <br>
+                </fieldset>
+                <br><br>
+                <fieldset>
+                    <legend><b>Time Period</b></legend>
+                    <pre><p>Start From: <input type="date" name="prstart" id="prstart" style="width:20%;"></p></pre>
+                    <pre><p>Ends On:    <input type="date" name="prend" id="prend" style="width:20%;"></p></pre>
+                </fieldset>
+                <br><br>
+                <button type="submit">DONE</button>
+                <button type="reset" style="margin-left:30px;">RESET</button>
+            </form>
+        </div>
+    </body>
+</html>
